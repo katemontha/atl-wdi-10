@@ -26,7 +26,7 @@
 - Pre-work and About Me page completion
 
 ## Hook (5m)
-This morning we are going to take a look at the DOM and how we can use the Chrome Dev Tools to manipulate it. This afternoon we will look at more advanced ways to perform DOM manipulation using Javascript.
+This morning we are going to take a look at the DOM and how we can use the Chrome Dev Tools to manipulate it. Next Wednesday we will look at more advanced ways to perform DOM manipulation using Javascript.
 
 <details>
 <summary>To start, can someone describe the difference between HTML and the DOM in their own words?</summary>
@@ -40,9 +40,11 @@ examples:
 
 </details>
 
+<br />
+
 **WE DO:** Goto [Kickass App](http://kickassapp.com/) and use it. What is happening?
 
-We are going to get into DOM manipulation later in the week, but to demonstrate the difference between an _HTML_ document and the _DOM_ that is created from the _HTML_ document, let's go to the [Jezebel](http://jezebel.com/) website and play around with some headlines.
+We are going to get into DOM manipulation next week, but to demonstrate the difference between an _HTML_ document and the _DOM_ that is created from the _HTML_ document, let's go to the [Jezebel](http://jezebel.com/) website and play around with some headlines.
 
 Using the Chrome DevTools Inspector (What's the shortcut?), and alter something on the page.
 
@@ -138,8 +140,9 @@ The `<body>` section is for the visible content on a web page.  As well as our J
 The `document.title` is going to output the title of the website, or what you see in your browser tab.
 </details>
 
+<br />
 - In the console, type `document.body.children[5]`.
-
+<br />
 <details>
 <summary>What do you expect to see?</summary>
 This statement will highlight the main content div, and we can click through and highlight other content from there.
@@ -148,45 +151,56 @@ This statement will highlight the main content div, and we can click through and
 
 ### **WE DO**
 
-- Go to Jezebel.
+- Go to [Jezebel](http://jezebel.com/).
 - In the console, type `document.getElementsByClassName('headline')[0];`
   - We will discuss this more later, but getElementsByClassName, returns an array/list of items with that class.  Arrays are zero-indexed, which means that they start with zero, so we need to add that number in square brackets to highlight the first title. 
   - This will highlight the first news title on the page.
-- Update that title to have the id="first-title"
+- In the DOM, update that element's title to have the id="firstTitle"
   <!-- - The funny thing is that Jezebel doesn't really use ids, so in order to access and Id, we need to take the initiative to add it ourselves. -->
-- In the console, type `document.getElementById('first-title');`
+- In the console, type `document.getElementById('firstTitle');`
   <!-- - This statement will also highlight the first news title on the page, but in a different way. -->
 
-- As with our earlier Jezebel example, you can change the HTML in the inspector but when you re-render the page, the changes are gone, because we are only changing the DOM (What is the DOM?). Try `document.write('WDI Rocks!!!')`. (Traditionally, you only use document.write for testing purposes because you can't add any styles to it, and it overwrites everything else).
+- As with our earlier Jezebel example, you can change the HTML in the inspector but when you re-render the page, the changes are gone, because we are only changing the DOM (What is the DOM?). Try `document.write('WDI Rocks!!!')`. (Traditionally, you only use **document.write** for testing purposes because you can't add any styles to it, and it overwrites everything else).
 
 <br />
 
 ## What is the Window Object?
 
 - The **Window Object** represents the window that is open in the browser.
-- The location property is the URL of the page.
+- The location property contains information about the current URL.
+
 - In the console, type `window.` and check out the available methods.
 
 <details>
 <summary>Do you recognize any of these methods?</summary>
-`alert()` will alert a message to the user.
-`focus()` will set the focus/cursor in an input box- this is helpful with forms. 
-`prompt()` displays a dialogue box to the user.
-`setInterval()` calls a function or expression at specified intervals (in milliseconds).
-`setTimeOut()` calls a function or expression after a certain amount of time (in milliseconds).
+- alert(): (https://www.w3schools.com/jsref/met_win_alert.asp) will alert a message to the user.
+<br />
+- focus(): (https://www.w3schools.com/jsref/met_win_focus.asp) will set the focus in a new window
+<br />
+- prompt(): (https://www.w3schools.com/jsref/met_win_prompt.asp) displays a dialogue box to the user that prompts them for input
+<br />
+- setInterval(): (https://www.w3schools.com/jsref/met_win_setinterval.asp) calls a function or evaluates an expression at specified intervals (in milliseconds).
+<br />
+- setTimeOut(): (https://www.w3schools.com/jsref/met_win_settimeout.asp) calls a function or evaluates an expression after a certain amount of time (in milliseconds).
+<br />
+*** Remember: 1000ms = 1s ***
 </details>
 
+<br />
 - In the console, type `window.location`.
 
 <details>
 <summary>What do you expect to see?</summary>
-`window.location.href` returns the href (URL) of the current page
-`window.location.hostname` returns the domain name of the web host
-`window.location.pathname` returns the path and filename of the current page
-`window.location.protocol` returns the web protocol used (http: or https:)
-`window.location.assign` loads a new document
+- window.location.href: (https://www.w3schools.com/jsref/prop_loc_href.asp) returns the entire URL of the current page
+<br />
+- window.location.hostname: (https://www.w3schools.com/jsref/prop_loc_hostname.asp) returns the host name or domain name of the URL
+<br />
+- window.location.pathname: (https://www.w3schools.com/jsref/prop_loc_pathname.asp) returns the path of the URL
+<br />
+- window.location.protocol: (https://www.w3schools.com/jsref/prop_loc_protocol.asp) returns the web protocol used (for example: http: or https:)- including the colon
 </details>
 
+<br />
 - In the console, type `window.document.write('Hello')`.
 
 <details>
@@ -217,12 +231,13 @@ Note that when placing a tag inside another tag, you should indent the new tag t
 ##### Example of an Anchor tag containing an Image tag
 
 ```html
-<a href="www.w3.org" target="_blank">
+<a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee" target="_blank">
   <img src="http://www.misiide.net/images/2013/03/Tim-Berners-Lee.jpg" alt="A picture of Tim Berners-Lee!" />
 </a>
 ```
 
-#####QUESTION
+##### QUESTION
+
 <details>
 <summary>Can anyone explain the HTML above?</summary>
   The `href` attribute above makes the image of Sir Timothy John Berners-Lee "clickable" and redirects the user to the W3 website.
@@ -274,15 +289,15 @@ Every site should start with these 5 tags:
 </html>
 ```
 
-1. The DOCTYPE tag is special and doesn't get a closing tag.  It also is the only tag that can have non-alpha-numeric (letters/numbers) values in it.
-2. html: shows where the html begins
-3. head: contains content specifically for the browser, not the user, to see (e.g.- meta tags, google analytics scripts). 
+1. **The DOCTYPE tag** is special and doesn't get a closing tag.  It also is the only tag that can have non-alpha-numeric (letters/numbers) values in it.
+2. **html tag**: shows where the html begins
+3. **head tag**: contains content specifically for the browser, not the user, to see (e.g.- meta tags, google analytics scripts). 
   - The `head` section is important for search engines, as it helps provide additional information about the website. Anything within the opening and closing `<head>` tags will **NOT** be displayed on the page.
   - The `<head>` tags are placed right after the opening `<html>` tag, and before the opening `<body>` tag.
-4. body: contains all the content that the user will see when viewing the html in a web browser like Chrome, Firefox, etc.
-5. title: This is what shows up in your browser tab.
+4. **body tag**: contains all the content that the user will see when viewing the html in a web browser like Chrome, Firefox, etc.
+5. **title tag**: This is what shows up in your browser tab.
 
-** These are the 4 pairs of tags: html, head, title and body that are mandatory for every web page.
+**The DOCTYPE + these are the 4 pairs of tags: html, head, title and body that are mandatory for every web page** 
 
 <br />
 
@@ -297,23 +312,29 @@ Every site should start with these 5 tags:
 
 <details>
 <summary>Does anyone know why?</summary>
-If your `<script>` tags are placed in the `<head>` of your document, your html will wait to render until the javaScript has been loaded.  Therefore, it is best to place it at just before your closing body tag.
+If your script tags are placed in the head of your document, your html will wait to render until the javaScript has been loaded.  Therefore, it is best to place it at just before your closing body tag.
 </details>
 
 <br />
 
 **YOU DO**
 
-1. Create the initial structure of the page
+1. Create the initial structure of the page, that will be about our post WDI plans.
     - `cd ~/Desktop/ga`
-    - `mkdir html_css_intro`
-    - `cd` into the folder - `cd html_css_intro`
+    - `mkdir class-exercises`
+    - `cd` into the folder - `cd class-exercises`
+    - `mkdir unit-01`
+    - `cd` into the folder - `cd unit-01`
+    - `mkdir html-css-intro`
+    - `cd` into the folder - `cd html-css-intro`
     - `touch index.html`
     - `subl .`
     - Create the basic html structure
 2. Add the meta tags for external `css` and `javascript` files.
     - `<link rel="stylehseet" type="text/css" href="style.css" />`
     - `<script src="main.js"></script>`
+
+**Make sure that you add them in the right place!**
 
 ---
 
@@ -325,14 +346,13 @@ For example: `<p></p>` - paragraph tag, block element, used for basic text on a 
 
 ---
 
-<br />
-
 ### Basic Tags
 
-1. h1, h2, h3, h4, h5, h6
+##### h1, h2, h3, h4, h5, h6
   - These are headers.  Imagine you are giving a lecture and you would like to create an outline.  Headers will help a computer/programmer figure out what are the title, sub sections, sub-sub sections, etc. of your outline.  They allude to importance on an html page.
   - The lower the number, the more important the header is.  h1 tags are generally the title of the page.  h2 denote a section, and so on.
-1. p
+
+##### p
   - These are paragraphs
 
 ### Specific Structural Elements
@@ -341,20 +361,26 @@ Of course a website is more than just headers and paragraphs.  It has many secti
 
 See also [HTML5 New Elements](http://www.w3schools.com/html/html5_new_elements.asp)
 
-##### All HTML5 Elements
-1. header
+#### All HTML5 Elements
+##### header
   - could contain elements like a logo and a nav bar.  Perhaps the title of the page too?
-2. footer
+
+##### footer
   - could contain disclaimers, copyrights, and less important links (privacy, terms and conditions, legal, etc).
-3. main
+
+##### main
   - the bulk of your site goes in here
-4. section
+
+##### section
   - within some of the tags listed above, there can be different sections.  Use this tag to block off those sections.
-5. nav
+
+##### nav
   - this will hold navigation links
-6. article
+
+##### article
   - if you're writing a blog, or have a page with many self contained sections, you might think about using the article tag
-7. aside
+
+##### aside
   - this is for tangential material.  Sidebars, inserts, etc.
 
 <br />
@@ -364,37 +390,37 @@ See also [HTML5 New Elements](http://www.w3schools.com/html/html5_new_elements.a
 In the `index.html` file you created earlier...
 
 1. Add a `header` tag for your post WDI plans
-2. Add `title` tags and empty `nav` tags inside the `body` 
+2. Add empty `nav` tags inside the `body` 
 3. Add a `main` section
 4. Add a `footer` section with your name
 
 ---
 
-<br />
-
 ### Generic Structure
 
 Sometimes we need a tag that doesn't quite fit into any of the previously defined categories.  If this is the case, we can use one of two generic tags.
 
-1. div
+##### div
   - used to block out chunks of content
-1. span
+
+##### span
   - use inline, to separate out small bits of content (e.g. letters, words, sentences, etc)
 
 ### Elements
 
 Some elements are not structural, but will make the content display differently.
 
-1. ul/ol/li
+##### ul/ol/li
   - creates a list, either unordered (ul) or ordered (ol)
   - inside each `ul` or `ol` is a set of `li` list item elements.
 
 ### Styled Text
 
-1. em
+##### em
   - this will emphasize a chunk of text, usually making it italicized
   - best practice- use **em** instead of **i**
-1. strong
+
+##### strong
   - this will emphasize a chunk of text, usually making it bold.
   - best practice- use **strong** instead of *b*
 
@@ -408,21 +434,21 @@ Some elements are not structural, but will make the content display differently.
 
 In the `index.html` file you created earlier...
 
-1. Add a `ul` with 4 `li` tags to your `nav`
+1. Add a `ul` with 2 `li` tags to your `nav` called: Home and About
 2. Add styled text tags to some piece of content
-3. Add a `span` tag to a small piece of content
+3. Add a `p` tag with your favorite lorem ipsum
+4. Add a `span` tag to a small piece of content
 
 --- 
-
-<br />
 
 ### Decorative Elements
 
 Some elements do not contain content and instead are purely for decoration.  Elements that do not contain content are written like so- `<no-content-tag/>`.  Note it is a self-closing tag/there is no closing tag and the slash comes before the final `>`
 
-1. hr
+##### hr
   - horizontal rule, `<hr>` creates a divider
-1. br
+
+##### br
   - break, `<br />`, starts a new line in a chunk of text.
 
 ---
@@ -445,19 +471,22 @@ We can add more meaning to a tag by adding "attributes" to it.  It looks like `<
 
 ## Common tags with attributes
 
-1. a
+##### a
   - Anchor tag.  Creates a clickable link to another page.  It uses the `href` attribute to do so.
   - example: `<a href="http://www.google.com">This link will go to Google</a>`
   - note that the actual URL (location) of the page is hidden, and that only the content is shown.
-2. img
+
+##### img
   - self-closing tag, but contains a `src` attribute with the URL for the image
   - make sure to add an `alt` attribute, as you need this for accessibility purposes or if your image doesn't show up.
   - example: `<img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="google logo"/>`
-3. video
+
+##### video
   - like `img` but links to a video
   - example: `<video src="http://www.w3schools.com/html/mov_bbb.mp4"/>`
   - also has attributes like `autoplay`, `controls`, `loop`
-4. audio
+
+##### audio
   - like `img` and `video`
   - example: `<audio controls="true" src="http://www.w3schools.com/tags/horse.mp3" />`
 
@@ -469,6 +498,7 @@ In the `index.html` file you created earlier...
 
 1. Add a link to your GitHub repo in the `footer` section of your page.
 2. Add an image to your page
+- Make sure that you add an alt tag
 
 <br />
 
@@ -492,6 +522,7 @@ Go to this [HTML Practice Exercise](https://github.com/ATL-WDI-Exercises/html-do
 
 1. Why should we use the `<strong>` tag instead of the `<b>` tag?
 2. What does Accessibility mean?
+  - What did you learn from your accessibility homework last night?
 
 <br />
 
@@ -501,7 +532,7 @@ Go to this [HTML Practice Exercise](https://github.com/ATL-WDI-Exercises/html-do
 
 ## Exercise #1
 
-Fork this [HTML/DOM](https://github.com/ATL-WDI-Exercises/html-dom) repo.  Using HTML tags only (don't worry about CSS), use the starter code below to recreate the Document Outline for the following website:
+cd into your `~/Desktop/ga/labs/unit-01` folder.  Fork this [HTML/DOM](https://github.com/ATL-WDI-Exercises/html-dom) repo, and then clone it into your folder.  Using HTML tags only (don't worry about CSS), use the starter code below to recreate the Document Outline for the following website:
 
 [How We Use Energy](http://needtoknow.nas.edu/energy/energy-use/)
 
@@ -510,7 +541,7 @@ Fork this [HTML/DOM](https://github.com/ATL-WDI-Exercises/html-dom) repo.  Using
 
 ## Exercise #2
 
-Work on the [Busy Hands](https://github.com/ATL-WDI-Exercises/busy-hands) exercise.
+Work on the [Busy Hands](https://github.com/ATL-WDI-Exercises/busy-hands) exercise, which is also in that folder.
 
 ---
 
