@@ -60,7 +60,15 @@ track of whether tasks have been completed, it will also keep track of
 how long each task took to complete. Tasks can be grouped into 'projects' to
 keep them organized.
 
-> Answer here
+> task:
+    name:
+    time begun:
+    time complete:
+
+  project:
+    name:
+    decription:
+    tasks:
 
 ### 2. Photo Sharing App
 
