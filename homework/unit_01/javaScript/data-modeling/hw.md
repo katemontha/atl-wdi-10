@@ -60,31 +60,40 @@ track of whether tasks have been completed, it will also keep track of
 how long each task took to complete. Tasks can be grouped into 'projects' to
 keep them organized.
 
-> <p>task:<br />
-    name:<br />
-    time begun:<br />
-    time complete:</p>
-  <p>project:<br />
-    name:<br />
-    description:<br />
-    tasks:</p>
+var task = {
+  name: input1;
+  timeBegun: input2;
+  timeComplete: input3;
+}
+
+var project = {
+  name: input1;
+  description: input2;
+  task: input3;
+}
+
 
 ### 2. Photo Sharing App
 
 In this app, users can upload photos to their accounts and share them with others. These photos can be grouped into albums.
 
-> <p>photo:<br />
-title:<br />
-date:<br />
-url:</p>
-<p>album:<br />
-name:<br />
-date:<br />
-photos:</p>
-<p>user:<br />
-username<br />
-photos:<br />
-albums:</p>
+var photo = {
+title: input1;
+date: input2;
+url: input3;
+}
+
+var album = {
+name: input1;
+date: input2;
+photos: input3;
+}
+
+var user = {
+username: input1;
+photos: input2;
+albums: input3;
+}
 
 ### 3. Home Automation Manager
 
