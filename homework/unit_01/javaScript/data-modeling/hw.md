@@ -60,20 +60,31 @@ track of whether tasks have been completed, it will also keep track of
 how long each task took to complete. Tasks can be grouped into 'projects' to
 keep them organized.
 
-> task:<br />
+> <p>task:<br />
     name:<br />
     time begun:<br />
-    time complete:<br /><br />
-  project:<br />
+    time complete:</p>
+  <p>project:<br />
     name:<br />
     description:<br />
-    tasks:<br />
+    tasks:</p>
 
 ### 2. Photo Sharing App
 
 In this app, users can upload photos to their accounts and share them with others. These photos can be grouped into albums.
 
-> Answer here
+> <p>photo:<br />
+title:<br />
+date:<br />
+url:</p>
+<p>album:<br />
+name:<br />
+date:<br />
+photos:</p>
+<p>user:<br />
+username<br />
+photos:<br />
+albums:</p>
 
 ### 3. Home Automation Manager
 
