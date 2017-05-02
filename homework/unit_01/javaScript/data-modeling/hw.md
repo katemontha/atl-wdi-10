@@ -67,7 +67,7 @@ keep them organized.
 
   project:
     name:
-    decription:
+    description:
     tasks:
 
 ### 2. Photo Sharing App
