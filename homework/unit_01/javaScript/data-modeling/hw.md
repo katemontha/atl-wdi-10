@@ -69,7 +69,7 @@ var task = {
 var project = {
   name: 'household tasks',
   description: 'tasks to be completed around the house',
-  tasks: 'dishes, laundry, cooking',
+  tasks: ['dishes, laundry, cooking'],
 };
 
 
