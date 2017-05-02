@@ -61,16 +61,16 @@ how long each task took to complete. Tasks can be grouped into 'projects' to
 keep them organized.
 
 var task = {
-  name: input1;
-  timeBegun: input2;
-  timeComplete: input3;
-}
+  name: 'dishes',
+  timeBegun: '9:30',
+  timeComplete: '10:00',
+};
 
 var project = {
-  name: input1;
-  description: input2;
-  task: input3;
-}
+  name: 'household tasks',
+  description: 'tasks to be completed around the house',
+  tasks: 'dishes, laundry, cooking',
+};
 
 
 ### 2. Photo Sharing App
@@ -78,22 +78,22 @@ var project = {
 In this app, users can upload photos to their accounts and share them with others. These photos can be grouped into albums.
 
 var photo = {
-title: input1;
-date: input2;
-url: input3;
-}
+title: 'mom',
+date: '05/01/2017',
+url: 'mom.jpg',
+};
 
 var album = {
-name: input1;
-date: input2;
-photos: input3;
-}
+name: 'family',
+date: '03/20/2017',
+photos: 'mom.jpg, dad.jpg, me.jpg, dita.jpg',
+};
 
 var user = {
-username: input1;
-photos: input2;
-albums: input3;
-}
+username: 'katemontha',
+photos: '56',
+albums: '3',
+};
 
 ### 3. Home Automation Manager
 
@@ -102,7 +102,14 @@ track of the time and temperature of the house that it monitors, and use that
 information to turn on and off different lights and adjust the thermostat up
 and down.
 
-> Answer here
+> var light = {
+  brightness; inpu
+a location
+a name
+A Home has:
+
+a temperature
+a set of lights
 
 ### 4. Sneaker Store
 
