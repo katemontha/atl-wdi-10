@@ -60,15 +60,14 @@ track of whether tasks have been completed, it will also keep track of
 how long each task took to complete. Tasks can be grouped into 'projects' to
 keep them organized.
 
-> task:
-    name:
-    time begun:
-    time complete:
-
-  project:
-    name:
-    description:
-    tasks:
+> task:<br />
+    name:<br />
+    time begun:<br />
+    time complete:<br /><br />
+  project:<br />
+    name:<br />
+    description:<br />
+    tasks:<br />
 
 ### 2. Photo Sharing App
 
