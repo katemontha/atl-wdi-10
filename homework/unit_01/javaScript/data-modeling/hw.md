@@ -78,21 +78,21 @@ var project = {
 In this app, users can upload photos to their accounts and share them with others. These photos can be grouped into albums.
 
 var photo = {
-title: 'mom',
-date: '05/01/2017',
-url: 'mom.jpg',
+  title: 'mom',
+  date: '05/01/2017',
+  url: 'mom.jpg',
 };
 
 var album = {
-name: 'family',
-date: '03/20/2017',
-photos: 'mom.jpg, dad.jpg, me.jpg, dita.jpg',
+  name: 'family',
+  date: '03/20/2017',
+  photos: ['mom.jpg', 'dad.jpg', 'me.jpg', 'dita.jpg'],
 };
 
 var user = {
-username: 'katemontha',
-photos: '56',
-albums: '3',
+  username: 'katemontha',
+  photos: '56',
+  albums: '3',
 };
 
 ### 3. Home Automation Manager
@@ -102,14 +102,16 @@ track of the time and temperature of the house that it monitors, and use that
 information to turn on and off different lights and adjust the thermostat up
 and down.
 
-> var light = {
-  brightness; inpu
-a location
-a name
-A Home has:
+var light = {
+  brightness: 'low,'
+  location: 'dinning room',
+  name: 'dining room',
+};
 
-a temperature
-a set of lights
+var home = {
+  temperature: '72',
+  setOfLights: ['living room,' 'dining room', 'kitchen', 'bedroom', bathroom'],
+};
 
 ### 4. Sneaker Store
 
