@@ -11,7 +11,11 @@
 // Output: the sum of the numbers that were passed in
 // Edge Case: If the array is empty, return 0
 var sumOfNums = function(numsArray){
-  // Your Code Here
+  var sum = 0;
+  for (var i = 0; i < numArray.length; i++) {
+    sum += numsArray[i];
+  }
+  return sum;
 };
 
 // #2
@@ -19,7 +23,13 @@ var sumOfNums = function(numsArray){
 // Output: an array of the numbers from the first array that are strictly
 //         greater (i.e. greater than but not equal to) than 10
 var numsGreaterThanTen = function(numsArray){
-  // Your Code Here
+  var results = [];
+  for (var i = 0; i < numArray.length; i++) {
+    if (numArray[i] > 10) {
+      results.push(numArray[i]);
+    }
+  }
+  return results;
 };
 
 // #3
@@ -28,14 +38,25 @@ var numsGreaterThanTen = function(numsArray){
 //         `false` otherwise
 // Edge Case: If the input array is empty, the function should return `true`.
 var allGreaterThanTen = function(numsArray){
-  // Your Code Here
+  for (var i = 0; i < numsArray.length; i++) {
+    if (numsArray[i] < 10) {
+      return false;
+    }
+  }
+  return true;
 };
 
 // #4
 // Input: an array of words
 // Output: an array of all words from the first array with five or more letters
 var wordsWithAtLeastFiveLetters = function(words){
-  // Your Code Here
+  var fiveLetterWords = [];
+  for (var i = 0; i < words.length; i++) {
+    if (words[i].length >= 5) {
+      fiveLetterWords.push(words[i]);
+    }
+  }
+  return fiveLetterWords;
 };
 
 // #5
@@ -43,8 +64,13 @@ var wordsWithAtLeastFiveLetters = function(words){
 // Output: `true` if ALL words start with the letter 'a' (case-insensitive),
 //          `false` otherwise
 // Edge Case: If the array is empty, the function should return `true`.
-var allStartingWithA = function(words){
-  // Your Code Here
+var allStartingWithA = function(words) {
+  for (var i = 0; i < words.length; i++) {
+    if (words[i].slice(0)  !== 'a' || words[i].slice(0) !== 'A') {
+      return false;
+    }
+  }
+  return true;
 };
 
 // #6
@@ -52,7 +78,12 @@ var allStartingWithA = function(words){
 // Output: `true` if there are ANY words that start with the letter 'b'
 //          (case-insensitive), `false` otherwise
 var anyStartingWithB = function(words){
-  // Your Code Here
+  for (var i = 0; i < words.length; i++) {
+    if (words[i].slice(0) === 'b' || words[i].slice(0) === 'B') {
+      return true;
+    }
+  }
+  return false;
 };
 
 // #7
