@@ -25,7 +25,9 @@ window.onload = function() {
   var ring3 = document.querySelector('.ring-3');
 
   body.addEventListener('click', bullseyeGame.miss);
-  ring1.addEventListener('click', bullseyeGame.outerRing)
+  ring1.addEventListener('click', bullseyeGame.outerRing);
+  ring2.addEventListener('click', bullseyeGame.middleRing);
+  ring3.addEventListener('click', bullseyeGame.bullseye);
 }
 
 
@@ -50,6 +52,24 @@ var bullseyeGame = {
 
   outerRing: function(event) {
     event.stopPropagation();
-    alert('outerRing was clicked')
+    alert('outerRing was clicked');
+
+    bullseyeGame.updateScore(10);
+  }
+},
+
+  middleRing: function(event) {
+    event.stopPropagation();
+    alert('middleRing was clicked');
+
+    bullseyeGame.updateScore(50);
+  }
+},
+
+    bullseye: function(event) {
+    event.stopPropagation();
+    alert('bullseye was clicked');
+
+    bullseyeGame.updateScore(100);
   }
 }
