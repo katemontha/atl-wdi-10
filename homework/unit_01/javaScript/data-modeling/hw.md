@@ -119,8 +119,24 @@ This app will allow customers to browse a list of products (sneakers, in this
 case), add those products to a cart, and save that cart as a past order once the
 purchase is complete.
 
-> Answer here
+> var sneakers = {
+    size: '9',
+    color: 'gray',
+    price: '89.00'
+  };
 
+  var orderItem = {
+    style: 'nike freeruns',
+    quantity: '1',
+  };
+
+  var checkout = {
+    status: 'complete',
+    time: '17:15',
+    date: '07/28/15',
+  }
+
+}
 ## Representing Abstractions in Code
 
 Once you've chosen the abstractions that your app will use, the next step is to
