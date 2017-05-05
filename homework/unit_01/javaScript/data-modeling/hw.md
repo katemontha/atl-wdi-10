@@ -191,7 +191,7 @@ var exampleLine = {
 
 What are some advantages and disadvantages of choosing these representations? Please give at least one example of each.
 
-> Answer here
+> It doesn't actually tell the user how many stops a rail line makes, but you can reference the station you are currently at to find out how many stops are ahead of you.
 
 ### 6. Doctor Appointment App
 
@@ -294,7 +294,12 @@ Under what circumstances might one representation be a better choice than the
 other? Are there any circumstances in which the other representation might be
 the better choice?
 
-> Answer here
+> The first option allows the user to find patient info through the doctor's appointments, however if a patient sees multiply doctors there could be some conflicts.
+
+The second option allows the user to find the patient and the doctor he/she will be seeing through the appointment info, but you would have to sort through other appoinments.
+
+The first one would be the better option for pulling up a doctor's agenda.
+The second could be used for checking patients in.
 
 ## Tying It Together
 
@@ -305,13 +310,36 @@ You've been tasked with building an in-browser tic-tac-toe game.
 a.  What are some possible entities that your application might use to model its
     data? Please pick at least two, with at least two properties apiece.
 
-  > Answer here
+  >var player = {
+    username: 'player1',
+    displayName: 'Kate',
+    tokenRepresented: 'X'
+  },
+
+  var move = {
+    token: 'X',
+    position: 7
+  },
+
+  var ticTacToe = []
+    playerX: 'player1',
+    playerO: 'player2',
+    moves: {
+      playerToken: 'X',
+      tokenPosition: 3,
+    },
+    { playerToken: 'O',
+      tokenPosition: 5,
+    }
+  ],
+
+
 
 b.  How might those entities be represented in JavaScript code?
 
-  > Answer here
+  > ^
 
 c.  Justify your choices in a) and b). Why these entities? Why these
     representations?
 
-  > Answer here
+  > The game needs to record each players' info, which token they respresent, and then the move that has been made with either token, and then log each players move onto the board.
