@@ -78,10 +78,12 @@ const ViewEngine = {
 const ViewHelpers = {
   zeroFill: function(number, length){
     var numberToString = number.toString();
+    //This was pretty much the only part where I didn't really understand what was happening.
     let zeroes = Math.max(length - numberToString.length, 0);
     for(var i = 0; i < (length - numberToString.length); i++){
       numberToString = '0' + numberToString;
     }
+    // ^^^
     return numberToString;
   },
 };
