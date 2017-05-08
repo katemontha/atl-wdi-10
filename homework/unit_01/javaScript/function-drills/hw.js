@@ -13,7 +13,7 @@
 var sumOfNums = function(numsArray){
   var sum = 0;
   for (var i = 0; i < numArray.length; i++) {
-    sum += numsArray[i];
+  sum += numsArray[i];
   }
   return sum;
 };
@@ -26,7 +26,7 @@ var numsGreaterThanTen = function(numsArray){
   var results = [];
   for (var i = 0; i < numArray.length; i++) {
     if (numArray[i] > 10) {
-      results.push(numArray[i]);
+    results.push(numArray[i]);
     }
   }
   return results;
@@ -40,7 +40,7 @@ var numsGreaterThanTen = function(numsArray){
 var allGreaterThanTen = function(numsArray){
   for (var i = 0; i < numsArray.length; i++) {
     if (numsArray[i] < 10) {
-      return false;
+    return false;
     }
   }
   return true;
@@ -53,7 +53,7 @@ var wordsWithAtLeastFiveLetters = function(words){
   var fiveLetterWords = [];
   for (var i = 0; i < words.length; i++) {
     if (words[i].length >= 5) {
-      fiveLetterWords.push(words[i]);
+    fiveLetterWords.push(words[i]);
     }
   }
   return fiveLetterWords;
@@ -67,7 +67,7 @@ var wordsWithAtLeastFiveLetters = function(words){
 var allStartingWithA = function(words) {
   for (var i = 0; i < words.length; i++) {
     if (words[i].slice(0)  !== 'a' || words[i].slice(0) !== 'A') {
-      return false;
+    return false;
     }
   }
   return true;
@@ -80,7 +80,7 @@ var allStartingWithA = function(words) {
 var anyStartingWithB = function(words){
   for (var i = 0; i < words.length; i++) {
     if (words[i].slice(0) === 'b' || words[i].slice(0) === 'B') {
-      return true;
+    return true;
     }
   }
   return false;
@@ -92,8 +92,24 @@ var anyStartingWithB = function(words){
 //          `false` otherwise
 //    Assume that vowels are 'a', 'e', 'i', 'o', and 'u' (NOT 'y')
 // Edge Case: If `n` is less than zero, return `null`.
-var hasAtLeastNVowels = function(word, n){
-  // Your Code Here
+
+var hasAtLeastNVowels = function(word, n) {
+  if (n < 0) {
+    return null;
+  }
+
+  word = word.toLowerCase();
+  var numberOfVowels = 0;
+  for (var i = 0; i < word.length; i++) {
+    if (word.charAt(i) === 'a' || word.charAt(i) === 'e' || word.charAt(i) === 'e' || word.charAt(i) === 'o' || word.charAt(i) === 'u' ) {
+      numberOfVowels += 1;
+    }
+  }
+  if (numberOfVowels >= n) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 // #8
