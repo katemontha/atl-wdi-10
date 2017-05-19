@@ -28,7 +28,7 @@
 
 ### Question 7: Write an express route that handles a POST request to the url `/menus` and redirects to the `/homepage`
 ```
-  app.post('/menus', function (req, res) {
+route.post('/menus', function (req, res) {
   res.redirect('/homepage')
   })
 ```
