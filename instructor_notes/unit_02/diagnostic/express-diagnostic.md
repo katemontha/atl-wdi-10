@@ -13,7 +13,7 @@
   Create Read Update Delete. Post Get Put Delete.
 
 ### Question 5: If we have a form where we want to create new data, what type of `method` do we use in our form?
-
+  Post
 
 ### Question 6: If the following form was submitted, what would `action="myScript.js"` do?
 
@@ -43,7 +43,7 @@ app.get("/artist/:id/song/:song_id"), function(req, res){
 ```
 
 ### Question 9: What is MVC? How have we been using it so far?
-
+  Model View Controller
 
 ## Bonus Question
 

@@ -1,0 +1,58 @@
+body {
+  background-color: #4286f4;
+  text-align: center;
+  color: #f2f0ea;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 100px;
+  margin-bottom: 0;
+  margin-top: 30px;
+  color: #333232;
+}
+
+h3 {
+  color: #fff577;
+  font-size: 20px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-style: none;
+}
+
+p {
+  margin-top: 5px;
+
+}
+
+aside {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+img {
+  border-radius: 15px;
+  background-color: white;
+  border: 5px solid white;
+  margin-top: 60px;
+}
+
+img:active {
+  background-color: #f7e5ff;
+}
+
+.tie-count {
+  color: #ffd093;
+}
+
+.win-count {
+  color: #beff93;
+}
+
+.loss-count {
+  color: #ff9393;
+}
+
