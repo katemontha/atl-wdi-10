@@ -27,7 +27,7 @@ In short, I like to think of ECMAScript as the language, and JavaScript as an im
 
 > Check out [this awesome visualization](http://shaunlebron.github.io/solar-system-of-js/#0) of the current state of the JS universe
 
-Condensed timeline:
+#### Condensed timeline:
 
 - 1999 - ES3 was released, the first widespread use of the language.
 - ES4 was never released, largely due to  political reasons.
@@ -47,7 +47,7 @@ the new syntax.
 <details>
 <summary>Who is Brendan Eich?</summary>
 
-He is the creator of JavaScript, which he created in 10 days!  He co-founded Mozilla.  And is the CEO of Brave Software, an internet security company.
+He is the creator of JavaScript, which he created in 10 days!  He co-founded Mozilla.  And he is the CEO of Brave Software, an internet security company. [Learn More](https://en.wikipedia.org/wiki/Brendan_Eich)
 
 </details>
 
@@ -60,7 +60,7 @@ Take 20 minutes to read through this article: [Getting Started with ECMAScript 6
 
 ## Support Modern Browsers
 
-Make sure that if you are using Chrome, you enable the experimental javascript flag by going to Chrome Flags (chrome://flags). And then relaunch Chrome.
+Make sure that if you are using Chrome, you enable the experimental javascript flag by going to Chrome Flags (chrome://flags), and clicking on the 'Experimental JavaScipt link' in order to enable it. And then relaunch Chrome.
 
 <br />
 
@@ -78,7 +78,7 @@ In short, it is the notion of which variables are available and where.
 <details>
 <summary>So far in class, what is the primary way to control scope in JS?</summary>
 
-If you wanted block level scope in ES5, you would need to use functions- either a regular function or an IIFE (immediately invoked function expression.
+If you wanted block level scope in ES5, you would need to use a function.
 
 </details>
 
@@ -86,7 +86,7 @@ If you wanted block level scope in ES5, you would need to use functions- either 
 
 #### `let`
 
-[Let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let): ES2015 introduces the concept of block scoping, which allows us to limit the scope of a variable declared with `let` to a given block `{ ... }`. It also avoids variables hoisting, as a variable is only declared/assigned where it exists within our code.
+[Let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let): ES2015 introduces the concept of block scoping, which allows us to limit the scope of a variable declared with `let` to a given block of code `{ ... }`. It also avoids variables hoisting, as a variable is only declared/assigned where it exists within our code.
 
 Scope in ES5:
 
@@ -120,7 +120,7 @@ You are more likely to see `let` declarations inside an `if` or `for` block beca
 
 ```js
 // ES5
-for(var i = 0; i < 10; i++){
+for(var i = 0; i < 10; i++) {
   console.log(i);
 }
 console.log("outside loop:", i);
@@ -129,7 +129,7 @@ console.log("outside loop:", i);
 
 ```js
 // ES2015
-for(let j = 0; j < 10; j++){
+for(let j = 0; j < 10; j++) {
   console.log(j);
 }
 console.log("outside loop:", j);
@@ -141,7 +141,7 @@ console.log("outside loop:", j);
 
 #### `const`
 
-[Const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const): ES2015 introduces another keyword for declaring variables called `const`. `const` is an identifier for variables that can not be reassigned and are considered read only variables. It is not a constant variable, but a **constant reference** to your variable.
+[Const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const): ES2015 introduces another keyword for declaring variables called `const`. `const` is an identifier for variables that can not be reassigned and are considered read only variables. It is not a constant variable, but a **constant reference** to a variable.
 
 In ES5, if you want to declare a variable that should remain constant, it is a common practice to write the name in all uppercase letters.  However, this will not prevent the variable from being reassigned. It is used more as a note to other developers about your intention for that variable.
 
@@ -163,7 +163,7 @@ var num1 = 2;
 
 [Default Parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters): With ES2015, we now have the option to set default values for any of our functions' parameters.
 
-In ES5, we had to use the 'or' expression in order to create a default.  However, in ES6, you can set a default within your function's parens.
+In ES5, we had to use the 'or' expression in order to create a default.
 
 ```js
 // ES5
@@ -176,6 +176,8 @@ hello(); // Hello, stranger
 hello("Danny"); // Hello, Danny
 ```
 
+In ES2015, you can set a default within your function's parens.
+
 ```js
 // ES2015
 function helloAgain(name = "stranger"){
@@ -186,7 +188,7 @@ helloAgain(); // Hello again, stranger
 helloAgain("Danny"); // Hello again, Danny
 ```
 
-The ES2015 way is generally better because it keeps your code more concise= you won't have 'or' expressions all over your code.
+The ES2015 way is generally better because it keeps your code more concise- you won't have 'or' expressions all over your code.
 
 <br />
 
@@ -196,13 +198,19 @@ The ES2015 way is generally better because it keeps your code more concise= you 
 
 ```js
 let [num1, num2] = [1, 2];
-num1; //= 1
-num2; //= 2
+num1; 
+//= 1
+num2; 
+//= 2
+
 let nums = [1, 2, 3, 4, 5];
 let [first, second, third] = nums;
-first; //= 1
-second; //= 2
-third; //= 3
+first; 
+//= 1
+second; 
+//= 2
+third; 
+//= 3
 ```
 
 What is on the left([num1, num2]), looks like an array literal, but you are actually working with individual variables, and surrounding them with square brackets because you are **destructuring the array**. You are telling the first value in the array (1) to assign itself to 'num1', and the second value (2) to assign itself to 'num2'.
@@ -220,21 +228,21 @@ var congressionalCandidate = {
 
 // ES5
 function greetPolitician(congressionalCandidate) {
-    console.log("Hello, " + congressionalCandidate.name + ". How's the race going in " + congressionalCandidate.location + "?");
+    console.log("Hello, " + congressionalCandidate.name + ". How is the race going in " + congressionalCandidate.location + "?");
 }
-greetUser(congressionalCandidate);
-=> Hello, Jon. How's the race going in Atlanta?
+greetPolitician(congressionalCandidate);
+=> Hello, Jon. How is the race going in Atlanta?
 
 
-// In ES2015 this becomes:
+// In ES2015:
 function greetNewPolitician({ name, location })  {
-    console.log("Hello, " + name + ".  How's the race going in " + location + "?");
+    console.log("Hello, " + name + ".  We hope you win the " + location + " race!");
 }
 greetNewPolitician(congressionalCandidate);
-=> Hello, Jon. How's the race going in Atlanta?
+=> Hello, Jon. We hope you win the Atlanta race!
 ```
 
-If you are destructuring an object, you would surround the desired variables with curly braces, which will make it look like you are creating an object literal, but you are really just building an destructuring assignment statement.  You will want to pick off specific properties in the object.
+If you are destructuring an object, you would surround the desired variables/parameters with curly braces, which will make it look like you are creating an object literal, but you are really just building a destructuring assignment statement.  You will be allowed to pick off specific properties in the object.
 
 <br />
 
@@ -245,7 +253,7 @@ If you are destructuring an object, you would surround the desired variables wit
 ```js
 // ES5
 var car = {
-  drive: function(){
+  drive: function() {
     console.log("vroom vroom");
   }
 }
@@ -277,7 +285,7 @@ var obj = {num1:num1, num2:num2};
 let num3 = 3;
 let num4 = 4;
 
-let obj = {num3, num4};
+let newObj = {num3, num4};
 ```
 
 <br />
@@ -309,18 +317,18 @@ In ES2015, we can interpolate variables using template literal syntax: '(`)' (ba
 
 ```js
 // ES2015
-let name = "Inigo Montoya";
-let killee = "father";
-let prepareTo = "die";
+let newName = "Inigo Montoya";
+let newKillee = "father";
+let newPrepareTo = "die";
 
-console.log(`Hello. My name is ${name}. You killed my ${killee}. Prepare to ${prepareTo}.`);
+console.log(`Hello. My name is ${newName}. You killed my ${newKillee}. Prepare to ${newPrepareTo}.`);
 
 // A template literal can also be on multiple lines and it would still be valid!
 console.log(`
   Hello. 
-  My name is ${name}. 
-  You killed my ${killee}. 
-  Prepare to ${prepareTo}.
+  My name is ${newName}. 
+  You killed my ${newKillee}. 
+  Prepare to ${newPrepareTo}.
 `);
 ```
 
@@ -340,13 +348,13 @@ favoriteFoods.forEach(function(favoriteFood) {
 
 ```js
 // ES2015
-let healthyFavoriteFood = ["salad", "yogurt with honey", "strawberries"];
+let healthyFavoriteFood = ["salad with lemon, olive oil and Maldons", "yogurt with honey", "strawberries"];
 healthyFavoriteFood.forEach((healthyFave) => {
   console.log(`I love ${healthyFave}`);
 });
 ```
 
-You can get access to each element in this array using a `for` loop.  However, the forEach() method is a method on an array that will iterate through the array.  You pass in a function to the forEach method, and tell it what you want to do with each item (via the param - (food, in this case)) in the array.
+You can get access to each element in this array using a `for` loop.  However, the forEach() method is a method on an array that will iterate through the array.  You pass in a function to the forEach method, and tell it what you would like to do with each item (via the param - (healthyFave, in this case)) in the array.
 
 ```js
 // ES5- with a for loop
@@ -356,7 +364,7 @@ for(var i = 0; i < favoriteFood.length; i++) {
 }
 ```
 
-You can write the whole arrow function on one line, and if you only have one parameter, you don't have to put it in parens.  Check out this even more concise syntax:
+If your arrow function is short, you can write the whole arrow function on one line, and if you only have one parameter, you don't even have to put it in parens.  Check out this even more concise syntax:
 
 ```js
 // ES2015
@@ -372,7 +380,7 @@ let foodFaves = ["pizza from Little Star in SF", "pop tarts from Star Provisions
 foodFaves.forEach((food, i) => console.log(`My number ${i + 1} favorite food is ${food}`));
 ```
 
-[SIDE NOTE] Arrow functions also have the benefit of not changing the value of `this`.
+**[SIDE NOTE]** Arrow functions also have the benefit of not changing the value of `this`.
 
 Additionally, the `return` statement is not needed with single line arrow functions. There is an **implicit return**.
 
@@ -416,12 +424,14 @@ If you need to support a legacy browser (depending on your user), check out the 
   - project ran by google, which takes ES2015 code and compiles it to ES5.
   - it doesn't support all of ES2015.
   - [Traceur repl](https://google.github.io/traceur-compiler/demo/repl.html#)
-  - [Plnkr](https://plnkr.co/) - great place to try out your code
-    - make sure to add the traceur from the search packages.
-      - will add traceur.js and bootstrap.js
-      - if you have an external js file, just make sure to add a type="module" to the tag
 - [Babel](https://babeljs.io/) - one of the most popular
 - [Addy osmani ES6 Tools](https://github.com/addyosmani/es6-tools)
+
+
+- [Plnkr](https://plnkr.co/) - great place to try out your code
+  - make sure to add the traceur from the search packages.
+    - will add traceur.js and bootstrap.js
+    - if you have an external js file, just make sure to add a type="module" to the tag
 
 **You always need to make sure that you are supporting the browsers that your users are using. If they can't use your site because it is 'too modern' you will lose them.**
 
@@ -433,7 +443,7 @@ If you need to support a legacy browser (depending on your user), check out the 
 
 [Spread Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator): The spread operator `...` allows an expression (like an array) to be expanded into multiple elements.
 
-This makes separating an array into individual elements incredibly simple. In ES5, you would need to use the index of each array item in order to get access to that value/send in that value as an argument.
+This makes separating an array into individual elements incredibly simple. In ES5, you would need to use the index of each array item in order to get access to that value or to send in that value as an argument.
 
 ```js
 // ES5
@@ -445,7 +455,7 @@ var volume = function(height, width, length) {
 volume(dimensions[0], dimensions[1], dimensions[2]);
 ```
 
-In ES6, you can just use the spread operator, which keeps your code DRY and makes it easier to understand.
+In ES2015, you can just use the spread operator, which keeps your code DRY and makes it easier to understand.
 
 ```js
 // ES2015

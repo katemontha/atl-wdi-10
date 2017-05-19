@@ -1317,13 +1317,13 @@
       <a href="https://github.com/ATL-WDI-Curriculum/atl-wdi-10/tree/master/morning_exercises/unit_01/javaScript/js-practice">Morning Exercise</a>
     </td>
     <td>
-      WDI9 Outcomes: Intro to Outcomes Program + Post-Course Support
-    </td>
-    <td>
       <a href="https://github.com/ATL-WDI-Curriculum/atl-wdi-10/tree/master/morning_exercises/unit_01/javaScript/javascript-good-and-bad-parts.md">Morning Exercise</a>
     </td>
     <td>
       <a href="https://github.com/ATL-WDI-Curriculum/atl-wdi-10/tree/master/morning_exercises/unit_01/javaScript/making-change">Morning Exercise</a>
+    </td>
+    <td>
+      WDI9 Outcomes: Intro to Outcomes Program + Post-Course Support
     </td>
     <td>
       <a href="https://github.com/ATL-WDI-Curriculum/atl-wdi-10/tree/master/morning_exercises/unit_01/code-wars/count-of-positives-sum-of-negatives.md">Morning Exercise</a>
@@ -1344,7 +1344,7 @@
       <a href="https://github.com/ATL-WDI-Curriculum/atl-wdi-10/tree/master/instructor_notes/unit_01/jQuery/intro-to-jQuery.md">Intro to jQuery</a>
     </td>
     <td>
-      <a href="https://github.com/ATL-WDI-Curriculum/atl-wdi-10/tree/master/instructor_notes/unit_01/javaScript/khan-academy.md">LAB</a><br />
+      <a href="https://github.com/ATL-WDI-Curriculum/atl-wdi-10/tree/master/labs/unit_01/javaScript/khan-academy.md">LAB</a><br />
       OR <br />
       <a href="https://github.com/ATL-WDI-Curriculum/atl-wdi-10/tree/master/instructor_notes/unit_01/javaScript/intro-to-ES2015.md">Intro to ES2015- (Breakout Session)</a>
     </td>
@@ -1364,7 +1364,7 @@
       <a href="https://github.com/ATL-WDI-Curriculum/atl-wdi-10/tree/master/instructor_notes/unit_01/jQuery/intro-to-jQuery.md">Intro to jQuery</a>
     </td>
     <td>
-      <a href="https://github.com/ATL-WDI-Curriculum/atl-wdi-10/tree/master/instructor_notes/unit_01/javaScript/khan-academy.md">LAB</a><br />
+      <a href="https://github.com/ATL-WDI-Curriculum/atl-wdi-10/tree/master/labs/unit_01/javaScript/khan-academy.md">LAB</a><br />
       OR <br />
       <a href="https://github.com/ATL-WDI-Curriculum/atl-wdi-10/tree/master/instructor_notes/unit_01/css/css-animations-and-transitions.md">CSS Animations- (Breakout Session)</a>
     </td>
@@ -1384,7 +1384,7 @@
       <a href="https://github.com/ATL-WDI-Curriculum/atl-wdi-10/tree/master/instructor_notes/unit_01/jQuery/intermediate-jQuery.md">Intermediate jQuery</a>
     </td>
     <td>
-      <a href="https://github.com/ATL-WDI-Curriculum/atl-wdi-10/tree/master/instructor_notes/unit_01/javaScript/khan-academy.md">LAB</a>
+      <a href="https://github.com/ATL-WDI-Curriculum/atl-wdi-10/tree/master/labs/unit_01/javaScript/khan-academy.md">LAB</a>
     </td>
   </tr>
   <tr>
@@ -1395,13 +1395,13 @@
     <td>
       <a href="https://github.com/ATL-WDI-Curriculum/atl-wdi-10/tree/master/labs/unit_01/javaScript/js-functions
       ">JS Functions LAB + </a><br />
-      <a href="https://github.com/ATL-WDI-Curriculum/atl-wdi-10/tree/master/labs/unit_01/javaScript/js-dice
-      ">JS Dice LAB + </a><br />
       <a href="https://github.com/ATL-WDI-Curriculum/atl-wdi-10/tree/master/labs/unit_01/javaScript/js-independent-practice
       ">Independent Practice LAB</a>
     </td>
     <td>
       <a href="https://github.com/ATL-WDI-Curriculum/atl-wdi-10/tree/master/labs/unit_01/javaScript/independent-click-events">Click Events LAB + </a><br />
+      <a href="https://github.com/ATL-WDI-Curriculum/atl-wdi-10/tree/master/labs/unit_01/javaScript/js-dice
+      ">JS Dice LAB + </a><br />
       <a href="https://github.com/ATL-WDI-Curriculum/atl-wdi-10/tree/master/labs/unit_01/javaScript/wendy-bite">Wendy Bite LAB</a>
     </td>
     <td>
@@ -1415,7 +1415,7 @@
       ">jQuery Jedi LAB</a><br />
     </td>
     <td>
-      <a href="https://github.com/ATL-WDI-Curriculum/atl-wdi-10/tree/master/instructor_notes/unit_01/javaScript/khan-academy.md">LAB</a>
+      <a href="https://github.com/ATL-WDI-Curriculum/atl-wdi-10/tree/master/labs/unit_01/javaScript/khan-academy.md">LAB</a>
       <!-- LAB or Guest Speaker -->
     </td>
   </tr>
@@ -1471,7 +1471,7 @@
 - [jQuery- W3 Schools](https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_dom_html_set)
 <br />
 
-#### ES6
+#### ES2015
 - [Const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
 - [Const](http://es6-features.org/#Constants)
 - [Let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
@@ -1496,7 +1496,7 @@
 - [ES6 Compatibility](https://kangax.github.io/compat-table/es6/)
 <br />
 
-#### ES6 we didn't cover
+#### ES2015 we didn't cover
 - [Rest Parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 - [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 - [Classes](http://es6-features.org/#ClassDefinition)

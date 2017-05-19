@@ -42,16 +42,16 @@ Write another for loop that iterates over the directors array but also adds the 
 => "Hi, David Lynch"
 ```
 
-#5
+## 5
 
 etc.
 
-Write a function `isCool` that accepts one parameter, `name` as an argument. The function should return a string that outputs the name and a message saying that that person is cool.
+Write a function `isCool` that accepts one parameter, `name` as an argument. The function should return a string that outputs the name and a message saying that the person is super cool.
 
 ```
 console.log(isCool("Thom"));
 
-=> "Thom is almost cool";
+=> "Thom is super cool";
 ```
 
 ## 6
@@ -131,7 +131,8 @@ console.log(wordReverse("Ishmael me Call"));
 Write a function `longestWord` that accepts a single argument, an array of strings. The method should return the longest word in the array. In case of a tie, the method should return the word that appears first in the array.
 
 ```
-console.log(longestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
+newArray = ["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"];
+console.log(longestWord(newArray));
 
 => "Peanutbutter"
 ```
@@ -142,7 +143,7 @@ console.log(longestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutte
 Write a function `digitSum` that accepts a number and returns the sum of its digits using a `for` loop.
 
 ```
-console.log(digitSum(42))
+console.log(digitSum(42));
 => 6;
 ```
 
