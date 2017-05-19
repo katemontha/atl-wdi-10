@@ -35,11 +35,13 @@
 
 ```
 app.get("/artist/:id/song/:song_id"), function(req, res){
-  //hmm...
+  var id = req.params.id;
+  var song_id = req.params.song_id;
 }
 ```
 
 ### Question 9: What is MVC? How have we been using it so far?
+
 
 ## Bonus Question
 
