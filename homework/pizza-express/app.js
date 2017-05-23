@@ -6,6 +6,11 @@ var express = require('express');
 var app     = express();
 // assigning 3000 as our port
 var port    = 3000;
+//require handlebars
+var hbs = require('hbs');
+
+app.set("view engine", "hbs");
+app.set('views', './views');
 
 //local 3000 message
 app.get('/', function(req, res, next) {
