@@ -27,10 +27,10 @@ var Tamagotchi = function (name, creatureType) {
 }
 
 //create new Tamagotchis
-var newTamagotchi1 = new Tamagotchi('Cam', 'human');
-var newTamagotchi2 = new Tamagotchi('Bruno', 'pup');
+var newTamagotchi1 = new Tamagotchi('Bruno', 'pup');
+var newTamagotchi2 = new Tamagotchi('Cam', 'human');
 
 
 //test out your Tamagotchies below via console.logs
-newTamagotchi1.puke();
-newTamagotchi2.yawn();
+newTamagotchi1.yawn();
+newTamagotchi2.puke();
