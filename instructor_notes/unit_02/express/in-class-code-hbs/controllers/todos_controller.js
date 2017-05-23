@@ -3,7 +3,7 @@ var router = express.Router();
 var data = require('../data.js');
 
 /* INDEX TODOS */
-router.get('/', function(req,res) {
+TodosRouter.get('/', function(req,res) {
 
   res.render('todos/index', {
     todos: data.seededTodos
@@ -11,12 +11,21 @@ router.get('/', function(req,res) {
 });
 
 /* NEW TODO */
-router.get('/new', function(req, res){
+todosRouter.get('/new', function(req, res){
   res.render('todos/new');
 });
 
+//edit todo
+todosRouter.get('/:id/edit', function (req, res){
+  var id = req.params.id;
+  res.render('todos/edit', {
+    id: id,
+    description: seededTodos[id].description;
+  })
+})
+
 /* SHOW TODO */
-router.get('/:id', function(req,res) {
+TodosRouter.get('/:id', function(req,res) {
   var todo = data.seededTodos[req.params.id];
 
   res.render('todos/show', {
@@ -24,8 +33,13 @@ router.get('/:id', function(req,res) {
   });
 });
 
+//change todos
+todosRouter.put('/:id', function (req,res){
+  var todoIndex =
+})
+
 /* CREATE/POST TODO */
-router.post('/', function(req, res){
+TodosRouter.post('/', function(req, res){
   var newTodo = {
     description: req.body.description,
     urgent: req.body.urgent
