@@ -7,9 +7,28 @@ var app     = express();
 // assigning 3000 as our port
 var port    = 3000;
 
+//local 3000 message
+app.get('/', function(req, res, next) {
+    res.send("Welcome to Pizza Express!");
+});
+
+//topping route
+app.get('/topping/:type', function(req, res, next) {
+    res.send(`${req.params.type}  pizza! Good choice!`);
+});
+
+//order route
+ app.get('/order/:amount/:size', function(req, res, next) {
+     res.send(`Your order for ${req.params.amount} ${req.params.size} pizzas will be ready in 1 minute!`);
+ });
+
+
+
 // tells the server to listen for requests on port 3000
 app.listen(port, function(){
   console.log("==========================")
   console.log('LISTENING ON PORT ' + port);
   console.log("==========================")
 });
+
+
