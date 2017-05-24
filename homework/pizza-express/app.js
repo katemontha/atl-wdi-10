@@ -12,19 +12,26 @@ var hbs = require('hbs');
 app.set("view engine", "hbs");
 app.set('views', './views');
 
-//local 3000 message
+//homepage
 app.get('/', function(req, res, next) {
-    res.send("Welcome to Pizza Express!");
+  res.render("index.hbs", {
+  message: "Welcome to Pizza Express!"
+  });
 });
 
 //topping route
-app.get('/topping/:type', function(req, res, next) {
-    res.send(`${req.params.type}  pizza! Good choice!`);
+app.get('/toppings/:type', function(req, res, next) {
+  res.render("toppings.hbs", {
+  topping: req.params.type
+  });
 });
 
 //order route
- app.get('/order/:amount/:size', function(req, res, next) {
-     res.send(`Your order for ${req.params.amount} ${req.params.size} pizzas will be ready in 1 minute!`);
+app.get('/order/:amount/:size', function(req, res, next) {
+  res.render("order.hbs", {
+  amount: req.params.amount,
+  size: req.params.size
+  });
  });
 
 
