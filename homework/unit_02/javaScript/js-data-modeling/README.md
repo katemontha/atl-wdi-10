@@ -56,7 +56,21 @@ This app hosts a ton of radio stations, each featuring their own playlists of so
 
 
 ```
-Write your answer here or in a separate js file.
+var pop = {
+  listeners: 58432;
+  stations: [{
+    station1: [{
+      stationNumber: "88.5",
+      broadcast: FM;
+      playlists: list1, list2, list3;
+    }]
+    station2: [{
+      stationNumber: "90.1",
+      broadcast: AM
+      playlists: list1, list2, list3;
+    }]
+  }]
+}
 ```
 
 ### 3. Rock Concert App
@@ -76,7 +90,20 @@ This app will allow customers to browse a list of coffeeshops nearby, order drin
 This app shows you all the latest stats from your favorite sports teams. You can view individual player stats and full team stats.
 
 ```
-Write your answer here or in a separate js file.
+var team = {
+  rank: 5;
+  gamesPlayed: 6;
+  won: 4;
+  loss: 2;
+  player: {
+    name: player1;
+    age: 28;
+    height: "6'7",
+    weight: 250
+    number: 33
+    points: 31.6
+  }
+}
 ```
 
 
@@ -85,7 +112,7 @@ Write your answer here or in a separate js file.
 Q. When you were creating relationships between the models, what were some thoughts or questions you had to help guide a connection between them?
 
 ```
-Write your answer here or in a separate js file.
+What objects to include and whether or not that object could have/needs a subdocument.
 ```
 
 ### Reading and Videos for Tomorrow
