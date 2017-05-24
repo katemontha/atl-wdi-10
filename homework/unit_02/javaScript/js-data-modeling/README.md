@@ -78,7 +78,15 @@ var pop = {
 This app will be a tool for managing all of your favorite bands' concerts; it will keep track of their tour dates, ticket purchasing, and next recommended show.
 
 ```
-Write your answer here or in a separate js file.
+var band1 = {
+  date: '10-5-17',
+  city: 'Atlanta',
+  venue: [{
+    name: 'Masquerade',
+    stage: 'Hell',
+  price: 15;
+  }]
+}
 ```
 
 ### 4. Coffee To-Go App
