@@ -34,8 +34,6 @@ app.get('/order/:amount/:size', function(req, res, next) {
   });
  });
 
-
-
 // tells the server to listen for requests on port 3000
 app.listen(port, function(){
   console.log("==========================")

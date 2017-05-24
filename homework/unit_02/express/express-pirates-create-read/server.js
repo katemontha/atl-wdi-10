@@ -3,8 +3,10 @@ var express = require('express');
 // Creates a new instance of express on our server
 var app = express();
 //controllers for `/pirates` resource
+/*
 var pirateController = require('./controllers/pirates.js');
 app.use("/pirates", pirateController);
+*/
 
 // when a request comes in at localhost:3000, it will respond
 app.get('/', function(req, res) {
