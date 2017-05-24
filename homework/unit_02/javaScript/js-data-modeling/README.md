@@ -30,7 +30,24 @@ entities/abstractions (e.g. Senior Paws app, above) that the app might use, and 
 This app provides easy access to all your e-mail service providers in one app. The app will let you select one of your email addresses and view your e-mails for that address.
 
 ```
-Write your answer here or in a separate js file.
+var main = {
+  address: 'katemontha@gmail.com',
+  provider: 'Gmail',
+  contacts: 'user1@mail.com', 'user2@mail.com';
+  inbox: [{
+    unopened: new1, new2;
+    opened: opened1, opened2, opened3;
+    starred: save1, saved2;
+  }]
+  outbox: [{
+    sent: sent1, sent2;
+    drafts: draft1;
+  }]
+  trash: [{
+    deleted: deleted1, deleted2, deleted3;
+    spam: spam1, spam2, spam3;
+  }]
+}
 ```
 
 ### 2. Radio on the Internet app
