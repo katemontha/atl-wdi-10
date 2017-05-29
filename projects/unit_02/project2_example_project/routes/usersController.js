@@ -49,7 +49,7 @@ router.post('/', function (request, response) {
             console.log(err);
             return;
         }
-        
+
         // once the new user has been saved, redirect to the users index page
         response.redirect('/users');
     });
@@ -125,7 +125,7 @@ router.put('/:id', function (request, response) {
                 return;
             }
 
-            // once we have found the user and updated it, redirect to 
+            // once we have found the user and updated it, redirect to
             // that user's show route
             response.redirect('/users/' + userId);
 
@@ -185,7 +185,7 @@ router.post('/:userId/items', function (request, response) {
             // we grabbed off of the form
             user.items.push(new Item({ name: newItemName }));
 
-            // once we have added the new Item to the user's collection 
+            // once we have added the new Item to the user's collection
             // of items, we can save the user
             user.save(function (err) {
                 if (err) {
@@ -193,7 +193,7 @@ router.post('/:userId/items', function (request, response) {
                     return;
                 }
 
-                // once the user has been saved, we can redirect back 
+                // once the user has been saved, we can redirect back
                 // to the User's show page, and we should see the new item
                 response.redirect('/users/' + userId);
             })
@@ -209,7 +209,7 @@ router.get('/:userId/items/:itemId/delete', function (request, response) {
     // grab the ID of the Item we would like to delete for the User ID above
     var itemId = request.params.itemId;
 
-    // use Mongoose to find the User by its ID and delete the Item 
+    // use Mongoose to find the User by its ID and delete the Item
     // that matches our Item ID
     User.findByIdAndUpdate(userId, {
         $pull: {
@@ -240,14 +240,14 @@ router.get('/:userId/items/:itemId/edit', function (request, response) {
     User.findById(userId)
         .exec(function (error, user) {
 
-            // once we have found the User, find the Item in its' array 
+            // once we have found the User, find the Item in its' array
             // of items that matches the Item ID above
             var itemToEdit = user.items.find(function (item) {
                 return item.id === itemId;
             })
 
-            // Once we have found the item we would like to edit, render the 
-            // Item edit form with all of the information we would like to put 
+            // Once we have found the item we would like to edit, render the
+            // Item edit form with all of the information we would like to put
             // into the form
             response.render('items/edit', {
                 userId: userId,
@@ -274,26 +274,26 @@ router.put('/:userId/items/:itemId', function (request, response) {
     User.findById(userId)
         .exec(function (error, user) {
 
-            // once we have found the User, find the Item in that user's 
+            // once we have found the User, find the Item in that user's
             // collection of Items that matches our Item ID above
             var itemToEdit = user.items.find(function (item) {
                 return item.id === itemId;
             })
 
-            // update the item we would like to edit with the new 
+            // update the item we would like to edit with the new
             // information from the form
             itemToEdit.name = editedItemFromForm.name;
 
             // once we have edited the Item, save the user to the database
             user.save(function (error, user) {
-                
-                // Once we have saved the user with its edited Item, redirect 
-                // to the show page for that User. We should see the Item 
+
+                // Once we have saved the user with its edited Item, redirect
+                // to the show page for that User. We should see the Item
                 // information updated.
                 response.redirect('/users/' + userId)
             });
 
-            
+
         });
 });
 
