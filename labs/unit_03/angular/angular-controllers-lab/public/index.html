@@ -4,10 +4,13 @@
     <meta charset="utf-8">
     <title>Angular Store App</title>
   </head>
-  <body>
-    {{'I ' + 'am ' + 'a ' + 'working ' + 'Angular.js ' + 'app!' }}
-    
+  <body ng-controller="ProductsController as productsCtrl">
+    <div ng-repeat="product in productsCtrl.products">
+      {{ product.name }} {{ product.price | currency }} {{ product.dateAdded | date }}
+    <div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/ProductsController.js"></script>
   </body>
 </html>
