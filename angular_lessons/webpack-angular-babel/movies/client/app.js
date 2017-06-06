@@ -1,2 +1,3 @@
-angular
-    .module('moviesApp', [])
+const angular = require('angular');
+
+angular.module('moviesApp', []);
