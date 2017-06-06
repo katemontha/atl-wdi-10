@@ -88,7 +88,7 @@ module.exports = ReviewsController;
 "use strict";
 
 
-var angular = __webpack_require__(6);
+var angular = __webpack_require__(5);
 
 angular.module('moviesApp', []);
 
@@ -114,7 +114,7 @@ function MoviesController() {
 "use strict";
 
 
-var reviewsTemplate = __webpack_require__(4);
+var reviewsTemplate = __webpack_require__(6);
 var reviewsController = __webpack_require__(0);
 
 var ReviewsComponent = {
@@ -126,12 +126,6 @@ angular.module('moviesApp').component('reviews', ReviewsComponent);
 
 /***/ }),
 /* 4 */
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
-/* 5 */
 /***/ (function(module, exports) {
 
 /**
@@ -33508,12 +33502,18 @@ $provide.value("$locale", {
 !window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(5);
+__webpack_require__(4);
 module.exports = angular;
 
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+module.exports = "<div>\n    <h3>Reviews:</h3>\n    <ul>\n        <li ng-repeat=\"review in $ctrl.reviewList\">{{review.content}}</li>\n    </ul>\n</div>\n";
 
 /***/ }),
 /* 7 */
