@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- ADD ng-app to the html tag -->
-<html>
+<html ng-app="InfamousCriminals">
 <head>
   <meta charset="UTF-8">
   <title>Infamous Criminals</title>
@@ -15,7 +15,7 @@
   <h1>Infamous Criminals</h1>
 
   <!-- ADD ng-controller to the section tag -->
-  <section>
+  <section ng-controller='criminal in criminals.all'>
 
     <!-- FILL IN THE BLANKS! -->
     <ul id="criminals">

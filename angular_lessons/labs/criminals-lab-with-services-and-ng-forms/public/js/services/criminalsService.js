@@ -1,5 +1,5 @@
 angular.module('InfamousCriminals')
-    .service('CriminalsService', CriminalsService);
+       .service('CriminalsService', CriminalsService);
 
 CriminalsService.$inject = ['$http'];
 

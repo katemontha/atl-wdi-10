@@ -1,19 +1,59 @@
-angular.module('thePresidentsApp')
+angular
+  .module('thePresidentsApp')
   .controller('PresidentsController', PresidentsController);
 
-function PresidentsController(){
-  this.all = [
-    { name: 'George Washington', start: 1789, end: 1797 },
-    { name: 'John Adams', start: 1797, end: 1801 },
-    { name: 'Thomas Jefferson', start: 1801, end: 1809 },
-    { name: 'James Madison', start: 1809, end: 1817 }
-  ];
+PresidentsController.$inject = ['$http'];
 
-  this.addPresident = addPresident;
-  this.newPresident = {};
+function PresidentsController($http) {
+  var vm = this;
+
+  vm.all = [];
+  vm.newPresident = {};
+  vm.addPresident = addPresident;
+  vm.updatePresident = updatePresident;
+  vm.deletePresident = deletePresident;
+
+  activate();
+
+  function activate() {
+    getAllPresidents();
+  }
 
   function addPresident(){
-    this.all.push(this.newPresident);
-    this.newPresident = {};
+    $http
+      .post('/presidents', vm.newPresident)
+      .then(function(response){
+        vm.all.push(response.data.president);
+        vm.newPresident = {};
+      });
+  }
+
+  function deletePresident(president){
+    $http
+      .delete('/presidents/' + president._id)
+      .then(function(response){
+        removePresidentFromList(president);
+      });
+  }
+
+  function getAllPresidents(){
+    $http
+      .get('/presidents')
+      .then(function(response){
+        vm.all = response.data.presidents;
+      });
+  }
+
+  function removePresidentFromList(president) {
+    var index = vm.all.indexOf(president);
+    vm.all.splice(index, 1);
+  }
+
+  function updatePresident(president){
+    $http
+      .patch('/presidents/' + president._id, president)
+      .then(function(response){
+        president.isEditing = false
+      });
   }
 }

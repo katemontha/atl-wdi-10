@@ -1,5 +1,5 @@
 angular.module('InfamousCriminals')
-.controller('CriminalsController', CriminalsController);
+       .controller('CriminalsController', CriminalsController);
 
 CriminalsController.$inject = ['CriminalsService'];
 
