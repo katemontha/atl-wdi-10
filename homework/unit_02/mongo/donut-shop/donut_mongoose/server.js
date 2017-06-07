@@ -40,6 +40,29 @@ app.use('/', donutsController);
 // LISTENERS
 //======================
 //CONNECT MONGOOSE TO "donut_store"
-
+mongoose.connect('mongodb://localhost/donut_store');
 
 //CREATE THE MONGOOSE CONNECTION and SET APP TO LISTEN to 3000
+
+mongoose.Promise = global.Promise;
+
+// Now that we are connected, let's save that connection to the database in a variable. We are just doing this to keep our code DRY.
+var db = mongoose.connection;
+
+// Will log an error if db can't connect to MongoDB
+db.on('error', function(err) {
+  console.log(err);
+});
+
+// Will log "database has been connected" if it successfully connects.
+db.once('open', function() {
+  console.log("database has been connected!");
+});
+
+// Disconnect from database
+
+var port = process.env.PORT || 3000;
+
+app.listen(port, function() {
+  console.log('donut-shop is listening on port ' + port);
+});
