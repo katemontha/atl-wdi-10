@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 var quotesController = require('./server/routes/quotes.js');
-app.use('/quotes', quotesController);
+app.use('/api/quotes', quotesController);
 
 var netflixController = require('./server/routes/netflix.js');
 app.use('/netflix', netflixController);

@@ -1,3 +1,10 @@
 console.log("Netflix Controller works!");
 
-//your Netflix Controller Here
+//Your QUOTES CONTROLLER HERE!
+NetflixController.$inject = [];
+
+function NetflixController() {
+	const vm = this;
+}
+
+module.exports = NetflixController;
