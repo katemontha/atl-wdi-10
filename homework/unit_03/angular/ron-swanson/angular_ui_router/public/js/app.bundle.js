@@ -5137,10 +5137,28 @@ module.exports = HomeController;
 console.log("Quotes Controller Works!"
 
 //Your QUOTES CONTROLLER HERE!
-);QuotesController.$inject = [];
+);QuotesController.$inject = ['QuotesService'];
 
-function QuotesController() {
-	var vm = this;
+function QuotesController(QuotesService) {
+    var vm = this;
+
+    vm.getSwansonized = getSwansonized;
+    vm.swansonQuotes = [];
+
+    //link the front end to hit the service
+    function activate() {
+        console.log(QuotesService);
+        console.log(vm);
+    }
+
+    function getSwansonized() {
+        QuotesService.getSwansonized().then(function (response) {
+            // console.log(response);
+            var newQuote = response.data[0];
+            vm.swansonQuotes.push(newQuote);
+        });
+    }
+    activate();
 }
 
 module.exports = QuotesController;
@@ -8925,6 +8943,7 @@ function QuotesService($http) {
 	self.create = create;
 	self.loadAll = loadAll;
 	self.loadCurrent = loadCurrent;
+	self.getSwansonized = getSwansonized;
 
 	// HOW IT DOES STUFF
 	function create(quotesData) {
@@ -8937,6 +8956,10 @@ function QuotesService($http) {
 
 	function loadCurrent(id) {
 		return $http.get('/api/quotes/' + id);
+	}
+
+	function getSwansonized() {
+		return $http.get('http://ron-swanson-quotes.herokuapp.com/v2/quotes');
 	}
 }
 
@@ -44594,7 +44617,7 @@ module.exports = "<section id=\"home\">\n\n  <h1>THIS IS THE HOME PAGE</h1>\n\n<
 /* 97 */
 /***/ (function(module, exports) {
 
-module.exports = "<section id=\"quotes\">\n<!-- All your code goes inside this <section> -->\n\n  <h1>RON SWANSON QUOTE OF THE DAY</h1>\n\n  <button>Get Swansonized</button>\n\n  <ul>\n    <li></li>\n  </ul>\n\n  <h3>See All my saved quotes</h3>\n\n</section>\n";
+module.exports = "<section id=\"quotes\">\n<!-- All your code goes inside this <section> -->\n\n  <h1>RON SWANSON QUOTE OF THE DAY</h1>\n\n  <button ng-click=\"$ctrl.getSwansonized()\">Get Swansonized</button>\n\n  <ul>\n    <li ng-repeat=\"quote in $ctrl.swansonQuotes\">\n      {{quote}}\n    </li>\n  </ul>\n\n  <h3>See All my saved quotes</h3>\n\n</section>\n";
 
 /***/ }),
 /* 98 */

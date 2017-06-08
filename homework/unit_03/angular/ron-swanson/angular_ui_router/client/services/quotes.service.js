@@ -11,6 +11,7 @@ function QuotesService($http) {
 	self.create = create;
 	self.loadAll = loadAll;
 	self.loadCurrent = loadCurrent;
+	self.getSwansonized = getSwansonized;
 
 
 	// HOW IT DOES STUFF
@@ -24,5 +25,9 @@ function QuotesService($http) {
 
 	function loadCurrent(id) {
 		return $http.get('/api/quotes/' + id);
+	}
+
+	function getSwansonized() {
+		return $http.get('http://ron-swanson-quotes.herokuapp.com/v2/quotes');
 	}
 }
