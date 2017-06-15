@@ -33,7 +33,7 @@ WHERE nationality = 'China';
 SELECT * 
 FROM authors
 INNER JOIN books ON authors.id = books.author_id
-WHERE nationality = 'China';
+WHERE name = 'Albert Camus';
 
 -- Find out how many books were written by US authors.
 SELECT COUNT(*)
