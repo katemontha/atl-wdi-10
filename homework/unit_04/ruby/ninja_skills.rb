@@ -6,3 +6,6 @@ a = true
 b = false
 a != b
 
+a = nil
+
+

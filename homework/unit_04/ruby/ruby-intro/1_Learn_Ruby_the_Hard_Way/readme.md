@@ -133,12 +133,15 @@ Please answer the following questions in the spaces provided.
 
   ```text
   
+  returns a boolean 
   ```
 
 5.  How do you define a method in Ruby? Give a simple example.
 
   ```ruby
-  returns a boolean 
+  def method
+    puts "this is how you define a ruby method"
+  end
   ```
 
 6.  How do you create a class in Ruby? Give a simple example.
